@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="ContactApp" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLb" destination="Spd-6U-mGd" id="1cr-Jl-Zy6"/>
+                <outlet property="phoneLb" destination="mk9-4U-2iA" id="zqn-HW-dIm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-6U-mGd">
+                    <rect key="frame" x="16" y="109" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mk9-4U-2iA">
+                    <rect key="frame" x="16" y="163" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG3-eW-hnG">
+                    <rect key="frame" x="70" y="237" width="253" height="35"/>
+                    <color key="backgroundColor" systemColor="systemCyanColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Update">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="UpdateButton:" destination="-1" eventType="touchUpInside" id="T6G-ZL-DcV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="cG3-eW-hnG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="9Ub-mV-L7P"/>
+                <constraint firstItem="Spd-6U-mGd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="DhN-PH-szh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cG3-eW-hnG" secondAttribute="trailing" constant="70" id="Hih-Y5-ekn"/>
+                <constraint firstItem="mk9-4U-2iA" firstAttribute="top" secondItem="Spd-6U-mGd" secondAttribute="bottom" constant="20" id="MIM-Ws-WHK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mk9-4U-2iA" secondAttribute="trailing" constant="16" id="VGn-ia-EA0"/>
+                <constraint firstItem="cG3-eW-hnG" firstAttribute="top" secondItem="mk9-4U-2iA" secondAttribute="bottom" constant="40" id="Vko-hJ-Zjy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Spd-6U-mGd" secondAttribute="trailing" constant="16" id="aGn-gk-HNb"/>
+                <constraint firstItem="Spd-6U-mGd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="efX-rS-uqX"/>
+                <constraint firstItem="mk9-4U-2iA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pHv-ff-kRL"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
