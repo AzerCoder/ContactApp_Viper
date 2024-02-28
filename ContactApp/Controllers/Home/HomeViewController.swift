@@ -7,10 +7,22 @@
 
 import UIKit
 
+protocol HomeRequestProtocol{
+    func apiPostList()
+    func apiPostDelete()
+    
+    func navigateGreateScreen()
+    func navigateEditScreen(contact:Contact)
+}
+protocol HomeResponseProtocol{
+    func onPostList(contact:[Contact])
+    func onPostDelete(delete:Bool)
+}
 
-class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,HomeResponseProtocol{
     @IBOutlet weak var tableView: UITableView!
     var items : Array<Contact> = Array()
+    var presenter: HomePresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,68 +38,22 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         self.tableView.reloadData()
     }
     
-    func apiContactList(){
-        showProgres()
-        AFHttp.get(url: AFHttp.API_POST_LIST, params: AFHttp.paramsEmpty(), handler: {respons in
-            self.hideProgres()
-            switch respons.result{
-            case .success:
-                let contact = try! JSONDecoder().decode([Contact].self, from: respons.data!)
-                self.refreshTableView(contact: contact)
-            case let .failure(error):
-                print(error)
-            }
-        })
+    func onPostList(contact: [Contact]) {
+        self.hideProgres()
+        self.refreshTableView(contact: contact)
     }
     
-    func apiContactDelete(contact:Contact){
-        showProgres()
-        AFHttp.del(url: AFHttp.API_POST_DELETE + contact.id!, params: AFHttp.paramsEmpty(), handler: {respons in
-            self.hideProgres()
-            switch respons.result{
-            case .success:
-                print(respons.result)
-                self.apiContactList()
-            case let .failure(error):
-                print(error)
-            }
-        })
+    func onPostDelete(delete: Bool) {
+        self.hideProgres()
+        presenter.apiPostList()
     }
-    
-    func apiContactCreate(name:String,phone:String){
-        showProgres()
-        AFHttp.post(url: AFHttp.API_POST_CREATE, params: AFHttp.paramsPostCreate(contact: Contact(name: name,phone: phone)), handler: {respons in
-            self.hideProgres()
-            switch respons.result{
-            case .success:
-                print(respons.result)
-                self.apiContactList()
-            case let .failure(error):
-                print(error)
-            }
-        })
-    }
-    
-    func apiContactUpdate(contact: Contact){
-        showProgres()
-        AFHttp.put(url: AFHttp.API_POST_UPDATE + contact.id!, params: AFHttp.paramsPostUpdate(contact: contact), handler: {respons in
-            self.hideProgres()
-            switch respons.result{
-            case .success:
-                print(respons.result)
-                self.apiContactList()
-            case let .failure(error):
-                print(error)
-            }
-        })
-        
-    }
+      
     
     // Mark: - Method
     func initView(){
         initNavigation()
-        
-        apiContactList()
+        configurViper()
+        presenter.apiPostList()
     }
     
     func initNavigation(){
@@ -96,7 +62,24 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: refresh, style: .plain, target: self, action: #selector(leftTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: add, style: .plain, target: self, action: #selector(rightTapped))
-        title = "Contacts"
+        title = "Contacts Viper"
+    }
+    
+    func configurViper(){
+        let manager = HttpManager()
+        let presenter = HomePresenter()
+        let interecter = HomeInterecter()
+        let routing = HomeRouting()
+        
+        presenter.controller = self
+        
+        self.presenter = presenter
+        presenter.interector = interecter
+        presenter.routing = routing
+        routing.viewController = self
+        interecter.manager = manager
+        interecter.response = self
+        
     }
     
     func callAddViewController(){
@@ -115,7 +98,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     // Mark: - Actions
     
     @objc func leftTapped(){
-        apiContactList()
+        presenter.apiPostList()
     }
     @objc func rightTapped(){
         callAddViewController()
@@ -148,7 +131,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     private func makeDeleteContextualAction(forRowAt indexpath: IndexPath, contact:Contact)->UIContextualAction{
         return UIContextualAction(style: .destructive, title: "Delete") { (action, swipeButtonView,complition) in
             complition(true)
-            self.apiContactDelete(contact: contact)
+            self.presenter.apiPostDelete(contact: contact)
         }
     }
     
@@ -161,7 +144,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        apiContactList()
+        presenter.apiPostList()
     }
     
 }

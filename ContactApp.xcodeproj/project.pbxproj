@@ -13,6 +13,16 @@
 		821BDF872B8A7574006B7E6A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 821BDF862B8A7574006B7E6A /* Alamofire */; };
 		821BDF8A2B8A75E9006B7E6A /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 821BDF892B8A75E9006B7E6A /* JGProgressHUD */; };
 		8277B68E2B8B3CB700C8FE16 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8277B68D2B8B3CB700C8FE16 /* Network.swift */; };
+		827A0CF12B8F842600FBA94E /* HomeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CF02B8F842600FBA94E /* HomeRouting.swift */; };
+		827A0CF32B8F843400FBA94E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CF22B8F843400FBA94E /* HomePresenter.swift */; };
+		827A0CF52B8F844700FBA94E /* HomeInterecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CF42B8F844700FBA94E /* HomeInterecter.swift */; };
+		827A0CF72B8F845800FBA94E /* AddRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CF62B8F845800FBA94E /* AddRouting.swift */; };
+		827A0CF92B8F846300FBA94E /* AddPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CF82B8F846300FBA94E /* AddPresenter.swift */; };
+		827A0CFB2B8F847500FBA94E /* AddInterecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CFA2B8F847500FBA94E /* AddInterecter.swift */; };
+		827A0CFD2B8F848000FBA94E /* EditRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CFC2B8F848000FBA94E /* EditRouting.swift */; };
+		827A0CFF2B8F849300FBA94E /* EditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0CFE2B8F849300FBA94E /* EditPresenter.swift */; };
+		827A0D012B8F849D00FBA94E /* EditInterecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0D002B8F849D00FBA94E /* EditInterecter.swift */; };
+		827A0D032B8F84B500FBA94E /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827A0D022B8F84B500FBA94E /* HttpManager.swift */; };
 		82E6AEB92B8A396D00F547A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6AEB82B8A396D00F547A1 /* AppDelegate.swift */; };
 		82E6AEBB2B8A396D00F547A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6AEBA2B8A396D00F547A1 /* SceneDelegate.swift */; };
 		82E6AEC02B8A396D00F547A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E6AEBE2B8A396D00F547A1 /* Main.storyboard */; };
@@ -32,6 +42,16 @@
 		821BDF812B8A6356006B7E6A /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		821BDF822B8A6356006B7E6A /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		8277B68D2B8B3CB700C8FE16 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		827A0CF02B8F842600FBA94E /* HomeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouting.swift; sourceTree = "<group>"; };
+		827A0CF22B8F843400FBA94E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		827A0CF42B8F844700FBA94E /* HomeInterecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterecter.swift; sourceTree = "<group>"; };
+		827A0CF62B8F845800FBA94E /* AddRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRouting.swift; sourceTree = "<group>"; };
+		827A0CF82B8F846300FBA94E /* AddPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPresenter.swift; sourceTree = "<group>"; };
+		827A0CFA2B8F847500FBA94E /* AddInterecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInterecter.swift; sourceTree = "<group>"; };
+		827A0CFC2B8F848000FBA94E /* EditRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouting.swift; sourceTree = "<group>"; };
+		827A0CFE2B8F849300FBA94E /* EditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPresenter.swift; sourceTree = "<group>"; };
+		827A0D002B8F849D00FBA94E /* EditInterecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInterecter.swift; sourceTree = "<group>"; };
+		827A0D022B8F84B500FBA94E /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		82E6AEB52B8A396D00F547A1 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E6AEB82B8A396D00F547A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82E6AEBA2B8A396D00F547A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +85,45 @@
 			isa = PBXGroup;
 			children = (
 				8277B68D2B8B3CB700C8FE16 /* Network.swift */,
+				827A0D022B8F84B500FBA94E /* HttpManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		827A0CED2B8F836500FBA94E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				82E6AECE2B8A39F400F547A1 /* HomeViewController.swift */,
+				82E6AECF2B8A39F400F547A1 /* HomeViewController.xib */,
+				827A0CF02B8F842600FBA94E /* HomeRouting.swift */,
+				827A0CF22B8F843400FBA94E /* HomePresenter.swift */,
+				827A0CF42B8F844700FBA94E /* HomeInterecter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		827A0CEE2B8F837000FBA94E /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				82E6AED22B8A3A3000F547A1 /* EditViewController.swift */,
+				82E6AED32B8A3A3000F547A1 /* EditViewController.xib */,
+				827A0CFC2B8F848000FBA94E /* EditRouting.swift */,
+				827A0CFE2B8F849300FBA94E /* EditPresenter.swift */,
+				827A0D002B8F849D00FBA94E /* EditInterecter.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		827A0CEF2B8F837600FBA94E /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				82E6AED62B8A3A5800F547A1 /* AddViewController.swift */,
+				82E6AED72B8A3A5800F547A1 /* AddViewController.xib */,
+				827A0CF62B8F845800FBA94E /* AddRouting.swift */,
+				827A0CF82B8F846300FBA94E /* AddPresenter.swift */,
+				827A0CFA2B8F847500FBA94E /* AddInterecter.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 		82E6AEAC2B8A396D00F547A1 = {
@@ -114,12 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				82E6AEDA2B8A3A6F00F547A1 /* BaseViewController.swift */,
-				82E6AECE2B8A39F400F547A1 /* HomeViewController.swift */,
-				82E6AECF2B8A39F400F547A1 /* HomeViewController.xib */,
-				82E6AED22B8A3A3000F547A1 /* EditViewController.swift */,
-				82E6AED32B8A3A3000F547A1 /* EditViewController.xib */,
-				82E6AED62B8A3A5800F547A1 /* AddViewController.swift */,
-				82E6AED72B8A3A5800F547A1 /* AddViewController.xib */,
+				827A0CED2B8F836500FBA94E /* Home */,
+				827A0CEF2B8F837600FBA94E /* Add */,
+				827A0CEE2B8F837000FBA94E /* Edit */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,15 +278,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827A0D032B8F84B500FBA94E /* HttpManager.swift in Sources */,
 				82E6AED82B8A3A5800F547A1 /* AddViewController.swift in Sources */,
+				827A0CF52B8F844700FBA94E /* HomeInterecter.swift in Sources */,
+				827A0CF72B8F845800FBA94E /* AddRouting.swift in Sources */,
 				82E6AED42B8A3A3000F547A1 /* EditViewController.swift in Sources */,
 				82E6AEB92B8A396D00F547A1 /* AppDelegate.swift in Sources */,
+				827A0CFB2B8F847500FBA94E /* AddInterecter.swift in Sources */,
 				82E6AEBB2B8A396D00F547A1 /* SceneDelegate.swift in Sources */,
 				821BDF832B8A6356006B7E6A /* ContactTableViewCell.swift in Sources */,
 				8277B68E2B8B3CB700C8FE16 /* Network.swift in Sources */,
 				82E6AED02B8A39F400F547A1 /* HomeViewController.swift in Sources */,
+				827A0D012B8F849D00FBA94E /* EditInterecter.swift in Sources */,
+				827A0CFD2B8F848000FBA94E /* EditRouting.swift in Sources */,
+				827A0CF12B8F842600FBA94E /* HomeRouting.swift in Sources */,
 				821BDF802B8A6272006B7E6A /* Contact.swift in Sources */,
 				82E6AEDB2B8A3A6F00F547A1 /* BaseViewController.swift in Sources */,
+				827A0CF92B8F846300FBA94E /* AddPresenter.swift in Sources */,
+				827A0CFF2B8F849300FBA94E /* EditPresenter.swift in Sources */,
+				827A0CF32B8F843400FBA94E /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
